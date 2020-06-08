@@ -15,33 +15,35 @@ namespace HW03.Task1
             int var1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input 2nd number:");
             int var2 = Convert.ToInt32(Console.ReadLine());
+            int sum = Calculator.Sum(var1, var2);
+            Console.WriteLine("Result equals:{0}", sum);
 
-            Calculator getsum = new Calculator();
-            int result = getsum.Sum(var1, var2);
-            Console.WriteLine("Result equals:{0}", result);
-
-            //2.Вычитане двух чисел(два входных параметра)
+            //2.Вычитание двух чисел(два входных параметра)
             Console.WriteLine("Вычитание двух чисел(два входных параметра):");
             Console.WriteLine("Input 1st number:");
-            int numb1 = Convert.ToInt32(Console.ReadLine());
+            int number1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input 2nd number:");
-            
-            int numb2 = Convert.ToInt32(Console.ReadLine());
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            int subtraction = Calculator.Subtraction(number1, number2);
+            Console.WriteLine("Result equals:{0}", subtraction);
 
-            Calculator getsubstraction = new Calculator();
-            int resultminus = getsubstraction.Substraction(numb1, numb2);
-            Console.WriteLine("Result equals:{0}", resultminus);
-
-            //4.Деление двух чисел(два входных параметра)
-            Console.WriteLine("Деление двух чисел(два входных параметра):");
+            //3.Умножение двух чисел(два входных параметра)
+            Console.WriteLine("Умножение двух чисел(два входных параметра):");
             Console.WriteLine("Input 1st number:");
             int input1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input 2nd number:");
             int input2 = Convert.ToInt32(Console.ReadLine());
+            int multiplication = Calculator.Multiplication(input1, input2);
+            Console.WriteLine("Result equals:{0}", multiplication);
 
-            Calculator getdeviion = new Calculator();
-            int resultdevide = getsubstraction.Devision(input1, input2);
-            Console.WriteLine("Result equals:{0}", resultdevide);
+            //4.Деление двух чисел(два входных параметра)
+            Console.WriteLine("Деление двух чисел(два входных параметра):");
+            Console.WriteLine("Input 1st number:");
+            int variable1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input 2nd number:");
+            int variable2 = Convert.ToInt32(Console.ReadLine());
+            int devision = Calculator.Devision(variable1, variable2);
+            Console.WriteLine("Result equals:{0}", devision);
 
             //5.Остаток от деления(два входных параметра)
             Console.WriteLine("Остаток от деления(два входных параметра):");
@@ -49,20 +51,16 @@ namespace HW03.Task1
             int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input 2nd number:");
             int num2 = Convert.ToInt32(Console.ReadLine());
-
-            Calculator getreminder = new Calculator();
-            int resultreminder = getreminder.DevisionReminder(num1, num2);
-            Console.WriteLine("Result equals:{0}", resultreminder);
+            int DevisionReminder = Calculator.DevisionReminder(num1, num2);
+            Console.WriteLine("Result equals:{0}", DevisionReminder);
 
             //6.Площадь круга(один входной параметр)
             Console.WriteLine("Площадь круга(один входной параметр):");
-            Console.WriteLine("Input 1st number:");
+            Console.WriteLine("Input radius:");
             double radius = Convert.ToDouble(Console.ReadLine());
-
-            Calculator getarea = new Calculator();
-            double resultarea = getarea.CircleArea(radius);
-            Console.WriteLine("Result equals:{0}", resultarea);
-       }
+            double CircleArea = Calculator.CircleArea(radius);
+            Console.WriteLine("Result equals:{0}", CircleArea);
+        }
     }
 }
             
