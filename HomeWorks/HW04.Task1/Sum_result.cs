@@ -18,11 +18,17 @@ namespace HW04.Task1
            
             if (userinput==result)
             {
-                Console.WriteLine($"{result} is the right answer");
+                Console.WriteLine($"{userinput} is the right answer");
             }
             else
             {
-                Console.WriteLine($"{result} is the wrong answer");
+                Console.WriteLine($"{userinput} is the wrong answer");
+                    if (userinput > result)
+                    Console.WriteLine("Number should be lower");
+                    else
+                    {
+                    Console.WriteLine("Number should be higher");
+                    }
             }
         }
     }
