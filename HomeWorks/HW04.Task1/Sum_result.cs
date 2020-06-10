@@ -12,10 +12,22 @@ namespace HW04.Task1
             int num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input 2nd number:");
             int num2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Input sum of this numbers:");
+            Console.WriteLine("Input the operator: \"+\" or \"-\"");
+            string operatoris = Console.ReadLine();
+            int result = 0;
+            switch (operatoris)
+            {
+                case "+":
+                     result = num1 + num2;
+                    break;
+                case "-":
+                     result = num1 - num2;
+                    break;
+            }
+
+            Console.WriteLine("Input the answer:");
             int userinput = Convert.ToInt32(Console.ReadLine());
-            int result = num1 + num2;
-           
+
             if (userinput==result)
             {
                 Console.WriteLine($"{userinput} is the right answer");
