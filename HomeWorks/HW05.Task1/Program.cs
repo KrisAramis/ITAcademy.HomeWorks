@@ -20,9 +20,7 @@ namespace HW05.Task1
             for (int i = 0; i<arraylength; i++)
                 {
                 fromconsolearray[i] = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(fromconsolearray[i]);
-
-            }
+                }
 
             int[] sumarray = new int[arraylength];
             for (int i = 0; i< sumarray.Length;i++)
@@ -32,11 +30,16 @@ namespace HW05.Task1
             }
             for(int i =0; i<arraylength; i++)
             {
-                Console.WriteLine("{0} member of {1}: {2}", i, fromconsolearray, fromconsolearray[i]);
-                Console.WriteLine("{0} member of {1}: {2}", i, randomarray, randomarray, randomarray[i]);
-                Console.WriteLine("{0} member of {1}: {2}", i, sumarray, sumarray[i]);
+                Console.WriteLine($"fromconsolearray[{i}]: {fromconsolearray[i]}");
+                Console.WriteLine($"randomarray[{i}]: {randomarray[i]}");
+                Console.WriteLine($"sumarray[{i}]:{sumarray[i]}");
             }
-            
+
+            {
+              
+                
+            }
+
         }
     }
 }
