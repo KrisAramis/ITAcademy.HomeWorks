@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace HW06.Task3
 {
@@ -6,9 +7,8 @@ namespace HW06.Task3
     {
         static void Main(string[] args)
         {
-            string Examplestring = "1a!2.3!!..4.!.? 6 7!.. ?"";
-
-            Rebuild.Rebuildstring(examplestring)
+            string example = "1a!2.3!!..4.!.? 6 7!.. ?";
+            ChangeString.Rebuildstring(example);
         }
     }
 }

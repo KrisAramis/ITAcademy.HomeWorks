@@ -12,17 +12,21 @@ namespace HW06.Task1
             string InputPoem = Console.ReadLine();
             return InputPoem;
         }
-        public static void  Replaceletters(string InputPoem)
+        public static string  Replaceletters(string poem)
+
         {
-                string modifiedInputPoem;
-                modifiedInputPoem = InputPoem.Replace('s', 'a').Replace('a','s');
-                Console.WriteLine(modifiedInputPoem);
+            string modifiedInputPoem;
+            modifiedInputPoem = poem.Replace('o','a');
+            return modifiedInputPoem;
         }
-        public static void SeparatePoem(string Inputpoem)
+        public static void SeparatePoem(string modifiedinput)
         {
-            string[] poem = Inputpoem.Split(';');
-            foreach (String s in poem)
-            Console.WriteLine(s);
+            string[] modifiedinpurarray = new string[] { };
+            modifiedinpurarray = modifiedinput.Split(';');
+            foreach (string s in modifiedinpurarray) 
+            { 
+                Console.WriteLine($"\n{s}");
+            }
         }
     }
 }

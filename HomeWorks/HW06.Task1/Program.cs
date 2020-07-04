@@ -8,7 +8,8 @@ namespace HW06.Task1
         static void Main(string[] args)
         {
             string Inputpoem = ReturnFormattedPoem.Askpoem();
-            ReturnFormattedPoem.Replaceletters(Inputpoem);
+            string modifiedstrign = ReturnFormattedPoem.Replaceletters(Inputpoem);
+            ReturnFormattedPoem.SeparatePoem(modifiedstrign);
         }
     }
 }

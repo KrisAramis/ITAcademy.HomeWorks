@@ -20,9 +20,9 @@ namespace HW06.Task2
             }
             Console.WriteLine($"{longestword} is the longest word");
             string newstringexample = stringexample.Replace(longestword, "");
-            Console.WriteLine(newstringexample);
+            Console.WriteLine($"Initial String:{stringexample} \nString after THE_LONGEST_WORD_DELETED: {newstringexample}");
         }
-                
+
         public static void Replacelongwithshort(string stringexample)
         {
             string longestword = "yes";
@@ -41,40 +41,38 @@ namespace HW06.Task2
                     shortestword = stringwords[i];
             }
             string changedstrexample = stringexample.Replace(shortestword, longestword);
-            Console.WriteLine(changedstrexample);
+            Console.WriteLine($"Initial String:{stringexample} \nString after THE_LONGEST_WITH_SHORTEST_REPLACED: {changedstrexample}");
         }
-        //public static void Letterssymbolscount(string stringexample)
-        //{
-        //    string stringexample;
-        //    char[] stringelements = stringexample.ToCharArray();
-        //    string letters = "ABCDEFGHIGKLMNOPQRSTUVWXYZ";
-        //    char[] alphabet = letters.ToCharArray();
-        //    alphabet.R
-        //    for (int i= 0; i<stringexample.Length; i++ )
-        //    {
-        //        if stringexample[i].CompareTo() 
-        //    }
-//        public static void Sortbylongestfirst(string examplestring)
-//        {
-//            string[] stringarray = examplestring.Split(" ");
-//            int[] stringarraylength = new int[] { };
-//            for (int i=0; i<=stringarray.Length-1; i++)
-//            {
-//                stringarraylength[i] = stringarray[i].Length;
-//                Console.WriteLine(stringarraylength[i]);
-//            }
-            
-//            Array.Sort(stringarray[i].Length);
-//            for (int i= 0; i< stringarray.Length-1;i++)
-//            {
-//                Console.WriteLine(stringarray[i]);
-//                for (int i = stringarray.GetLowerBound(0); i <= arr.GetUpperBound(0);
-//           i++)
-//                {
-//                    Console.WriteLine("   [{0}] : {1}", i, string[i]);
-//                }
-//                Console.WriteLine();
-//            }
-//        }
-//    }
-//}
+        public static void Letterssymbolscount(string stringexample)
+        {
+            int letters = 0;
+            int symbols = 0;
+            char[] examplechars = stringexample.ToCharArray();
+            for (int i = 0; i < examplechars.GetUpperBound(0); i++)
+            {
+                if ((examplechars[i] >= 'a' && examplechars[i] <= 'z' ) || (Char.IsUpper(examplechars[i])==true))
+                {
+                    letters++;
+                }
+                else if (Char.IsPunctuation(examplechars[i]) == true)
+                {
+                    symbols++;
+                }
+            }
+            Console.WriteLine("Number of Alphabets in the string is : {0}\n", letters);
+            Console.WriteLine("Number of Digits in the string is : {0}\n", symbols);
+        }
+    
+        public static void Sortbylongestfirst(string stringexample)
+        { 
+            string[] stringarray = stringexample.Split(" ");
+            SortAlphabetLength sorting = new SortAlphabetLength();
+            Array.Sort(  stringarray, 0, stringarray.GetUpperBound(0), sorting);
+            Console.WriteLine(" Sorted by the longest first: \n");
+                for (int i = stringarray.GetLowerBound(0); i <= stringarray.GetUpperBound(0);i++)
+                {
+                    Console.WriteLine(" [{0}] : {1}", i, stringarray[i]);
+                }
+        }
+    }
+}
