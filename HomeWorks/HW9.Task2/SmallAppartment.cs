@@ -4,8 +4,16 @@ using System.Text;
 
 namespace HW9.Task2
 {
-    class SmallAppartment:House
+    public class SmallAppartment : House
     {
-         double area = 50;
+        public SmallAppartment()
+           : base(50)
+        {
+
+        }
+        public void ShowData()
+        {
+            Console.WriteLine($"Your appartment is {area} m2.");
+        }
     }
 }
