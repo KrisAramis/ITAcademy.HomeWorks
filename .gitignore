@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/HomeWorks/Lecture.Delegate
+/HomeWorks/ConsoleApp1/ConsoleApp1.csproj
+/HomeWorks/ConsoleApp1
+/HomeWorks/ClassLibrary1
