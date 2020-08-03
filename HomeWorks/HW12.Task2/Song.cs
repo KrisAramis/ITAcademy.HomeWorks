@@ -24,31 +24,7 @@ namespace HW12.Task2
         public Genres Genres
         { get; set; }
 
-        Person p2 = new Person("Bill", "Gates");
-        p2.Display();
-            class Employee:Person
-        {
-            public override Display()
-            { Consoq.Writeline()}
-        }
-        class Manager : Employee
-        {
-            public Manager(string name, string lastname, string company)
-                : base(name, lastname, company)
-            { }
-            public override sealed Display()
-            {
-                base.Display()
-                Console.WriteLine("This is manager");
-            }
-
-
-        }
-
-            public virtual void Display()
-        {
-            Console.WriteLine(Firstname + "" + Lastname);
-        }
+       
         public Song()
         {
             Name = name;
